@@ -30,7 +30,7 @@ struct DynamicArray {
 
     void append(const T d) {
         if (++size_ > capacity_) {
-            capacity_ *= 2;
+            capacity_ = (capacity_+1)*2;
             data_ = (T*)realloc(data_, capacity_*sizeof(T));
         }
 
